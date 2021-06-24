@@ -1,0 +1,14 @@
+{{#if user}}
+
+<a href="/create/{{_id}}/details" class="added-hotel">
+    <img src="{{imgUrl}}" alt="" class="picture-added-hotel">
+    <h3>{{hotel}}</h3>
+    <span>Free rooms: {{freeRooms}}</span>
+</a>
+{{else}}
+<a href="/auth/login" class="added-hotel">
+    <img src="{{imgUrl}}" alt="" class="picture-added-hotel">
+    <h3>{{hotel}}</h3>
+    <span>Free rooms: {{freeRooms}}</span>
+</a>
+{{/if}}

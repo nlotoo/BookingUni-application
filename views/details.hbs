@@ -1,0 +1,28 @@
+<section id="viewhotelDetails">
+    <h2>Details</h2>
+    <div class="hotel-ticket">
+        <div class="hotel-left">
+            <img src="{{data.imgUrl}}" alt="">
+        </div>
+        <div class="hotel-right">
+            <div>
+                <h3>{{data.hotel}}</h3>
+            </div>
+            <div>
+                Auckland
+            </div>
+            <p><span>Free rooms: {{data.freeRooms}}</span> </p>
+            {{#if itsBooked}}
+            <p><span class="green">You already have booked a room</span> </p>
+            {{else}}
+            <a href="/create/{{data._id}}/book" class="book">Book</a>
+            {{/if}}
+
+            {{#if itsOwner}}
+            <a href="/create/{{data._id}}/edit" class="edit">Edit</a>
+            <a href="/create/{{data._id}}/delete" class="remove">Delete</a>
+            {{/if}}
+        </div>
+
+    </div>
+</section>
